@@ -1,8 +1,7 @@
-// src/api/axios.js
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: '/',
+  baseURL: import.meta.env.VITE_API_BASE_URL || '/', // ← 환경변수 우선
   withCredentials: true,
 });
 
